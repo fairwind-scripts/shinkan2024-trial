@@ -19,9 +19,13 @@
 				"dbaeumer.vscode-eslint",
 				"HTMLHint.vscode-htmlhint",
 				"usernamehw.errorlens",
-				"mhutchie.git-graph"
+				"mhutchie.git-graph",
+				"monosans.djlint"
 			],
 			"settings": {
+				"files.associations": {
+					"*.html": "jinja-html"
+				},
 				"files.insertFinalNewline": true,
 				"files.trimFinalNewlines": true,
 				"files.trimTrailingWhitespace": true,
@@ -60,7 +64,12 @@
 					"lang": "ja",
 					"charset": "utf-8",
 					"doctype": "html"
-				}
+				},
+				"[html][django-html][handlebars][hbs][mustache][jinja][jinja-html][nj][njk][nunjucks][twig]": {
+					"editor.defaultFormatter": "monosans.djlint"
+				},
+				"djlint.enable": true,
+				"djlint.profile": "jinja"
 			}
 		}
 	}
