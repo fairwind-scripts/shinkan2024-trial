@@ -39,6 +39,7 @@
 					"source.fixAll.eslint": "always",
 					"source.organizeImports": "always"
 				},
+				"python.defaultInterpreterPath": "/opt/pysetup/.venv/bin/python",
 				"[python]": {
 					"diffEditor.ignoreTrimWhitespace": false,
 					"editor.formatOnType": true,
