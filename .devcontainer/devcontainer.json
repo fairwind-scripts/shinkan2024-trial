@@ -20,7 +20,47 @@
 				"HTMLHint.vscode-htmlhint",
 				"usernamehw.errorlens",
 				"mhutchie.git-graph"
-			]
+			],
+			"settings": {
+				"files.insertFinalNewline": true,
+				"files.trimFinalNewlines": true,
+				"files.trimTrailingWhitespace": true,
+				"editor.tabSize": 4,
+				"editor.guides.indentation": true,
+				"editor.guides.bracketPairs": false,
+				"editor.guides.bracketPairsHorizontal": false,
+				"editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+				"editor.roundedSelection": true,
+				"editor.formatOnPaste": true,
+				"editor.formatOnSave": true,
+				"editor.formatOnType": true,
+				"editor.defaultFormatter": "esbenp.prettier-vscode",
+				"editor.codeActionsOnSave": {
+					"source.fixAll.eslint": "always",
+					"source.organizeImports": "always"
+				},
+				"[python]": {
+					"diffEditor.ignoreTrimWhitespace": false,
+					"editor.formatOnType": true,
+					"editor.formatOnSave": true,
+					"editor.formatOnPaste": true,
+					"editor.wordBasedSuggestions": "off",
+					"editor.defaultFormatter": "charliermarsh.ruff"
+				},
+				"mypy-type-checker.importStrategy": "fromEnvironment",
+				"python.analysis.autoSearchPaths": true,
+				"python.analysis.useLibraryCodeForTypes": true,
+				"[markdown]": {
+					"files.trimTrailingWhitespace": false,
+					"editor.formatOnSave": true,
+					"editor.formatOnPaste": false
+				},
+				"emmet.variables": {
+					"lang": "ja",
+					"charset": "utf-8",
+					"doctype": "html"
+				}
+			}
 		}
 	}
 }
