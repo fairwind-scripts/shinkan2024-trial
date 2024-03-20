@@ -1,0 +1,52 @@
+version: "3"
+
+services:
+    flask:
+        build:
+            context: .
+            dockerfile: ./docker/python/Dockerfile
+        container_name: "shinkan2024-flask"
+        ports:
+            - 5000:5000
+        networks:
+            - shinkan2024-nw
+        volumes:
+            # .venv をマウントしないようにするために Volume として分離させる
+            - shinkan2024-flask-venv:/fairwind/.venv
+            - ./src:/fairwind/src
+        environment:
+            FLASK_APP: src/app.py
+        working_dir: /fairwind
+        command: >
+            bash -c "
+            flask run --host=0.0.0.0 --port=5000 --debug
+            "
+        restart: unless-stopped
+        tty: true
+    nginx:
+        build:
+            context: .
+            dockerfile: ./docker/nginx/Dockerfile
+        container_name: "shinkan2024-nginx"
+        ports:
+            - 80:80
+        depends_on:
+            - flask
+        networks:
+            - shinkan2024-nw
+        restart: always
+        volumes:
+            - ./docker/nginx/conf:/etc/nginx/conf.d
+            - ./docker/nginx/log:/var/log/nginx
+        links:
+            - flask
+networks:
+    shinkan2024-nw:
+        driver: bridge
+        driver_opts:
+            com.docker.network.enable_ipv6: "true"
+        ipam:
+            driver: default
+volumes:
+    shinkan2024-flask-venv:
+        driver: local

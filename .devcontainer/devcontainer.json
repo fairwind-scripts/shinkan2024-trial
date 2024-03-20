@@ -1,0 +1,26 @@
+{
+	"name": "flask",
+	"dockerComposeFile": "../docker-compose.yml",
+	"service": "flask",
+	"workspaceFolder": "/fairwind",
+	"shutdownAction": "stopCompose",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"MS-CEINTL.vscode-language-pack-ja",
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"ms-python.pylint",
+				"charliermarsh.ruff",
+				"ms-python.isort",
+				"ms-python.mypy-type-checker",
+				"ecmel.vscode-html-css",
+				"esbenp.prettier-vscode",
+				"dbaeumer.vscode-eslint",
+				"HTMLHint.vscode-htmlhint",
+				"usernamehw.errorlens",
+				"mhutchie.git-graph"
+			]
+		}
+	}
+}
