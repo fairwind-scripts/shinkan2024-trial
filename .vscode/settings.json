@@ -1,20 +1,12 @@
-{ // ファイル保存時、最終行に改行を挿入する
+{
     "files.insertFinalNewline": true,
-    // ファイル保存時、最終行以降の空行を削除する
     "files.trimFinalNewlines": true,
-    // ファイル保存時、末尾の空白をトリミングする
     "files.trimTrailingWhitespace": true,
-    // タブサイズ
     "editor.tabSize": 4,
-    // インデントガイドを表示する
     "editor.guides.indentation": true,
-    // 括弧（ブラケット）のペアガイドを表示する
     "editor.guides.bracketPairs": false,
-    // 括弧（ブラケット）の水平方向のペアガイドを表示する
     "editor.guides.bracketPairsHorizontal": false,
-    // 括弧（ブラケット）のペアごとに色を分ける
     "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
-    // 選択範囲のハイライトに角丸を適用する
     "editor.roundedSelection": true,
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
@@ -38,12 +30,11 @@
     "[markdown]": {
         "files.trimTrailingWhitespace": false,
         "editor.formatOnSave": true,
-        // ペースト時、自動的に整形しない
         "editor.formatOnPaste": false,
     },
     "emmet.variables": {
-        "lang": "ja", // => <html lang="ja">
-        "charset": "utf-8", // => <meta charset="utf-8">
-        "doctype": "html", // => <!DOCTYPE html>
+        "lang": "ja",
+        "charset": "utf-8",
+        "doctype": "html",
     },
 }
