@@ -7,7 +7,7 @@ services:
             dockerfile: ./docker/python/Dockerfile
         container_name: "shinkan2024-flask"
         ports:
-            - 5000:5000
+            - 5001:5001
         networks:
             - shinkan2024-nw
         volumes:
@@ -19,7 +19,7 @@ services:
         working_dir: /fairwind
         command: >
             bash -c "
-            flask run --host=0.0.0.0 --port=5000 --debug
+            flask run --host=0.0.0.0 --port=5001 --debug
             "
         restart: unless-stopped
         tty: true
