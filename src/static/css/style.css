@@ -1,3 +1,61 @@
-h1 {
-    color: red;
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Inter:wght@100..900&display=swap");
+
+html {
+    font-family: "Inter", "Noto Sans JP", sans-serif;
+    margin: 0 2rem;
+}
+body {
+    margin: 0;
+}
+nav {
+    align-items: center;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 calc(50% - 50vw) 1rem calc(50% - 50vw);
+    padding: 1rem calc(50vw - 50%);
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+.logo {
+    position: relative;
+    top: 6px;
+}
+nav > ul {
+    justify-self: right;
+    width: fit-content;
+}
+nav > ul > li {
+    display: inline;
+    list-style: none;
+    margin-inline: 0.5rem;
+}
+nav a {
+    color: #000;
+    font-weight: bold;
+    transition: 0.25s;
+    text-decoration: none;
+}
+nav a:hover {
+    color: #0693e3;
+}
+footer {
+    margin: 1rem calc(50% - 50vw) 0 calc(50% - 50vw);
+    padding: 1rem calc(50vw - 50%);
+    background-color: aliceblue;
+}
+footer > div {
+    height: 100%;
+    margin: auto;
+    width: fit-content;
+    align-items: center;
+    margin-top: 1rem;
+}
+footer svg:hover {
+    fill: red;
+}
+footer p {
+    line-height: 1.65rem;
 }

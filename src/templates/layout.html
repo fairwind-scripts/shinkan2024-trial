@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Flask Web Application" />
+        <meta name="keywords" content="Flask, Python, Web Application" />
+        <!-- Load Static Assets -->
+        <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='css/style.css') }}"
+        />
+        <link
+            rel="icon"
+            href="{{url_for('static',filename='images/favicon.ico')}}"
+        />
+        <title>{% block title %} {% endblock %}</title>
+    </head>
+    <body>
+        <nav>
+            <a href="/"
+                ><image
+                    src="/static/images/logo.png"
+                    class="logo"
+                    width="160px"
+            /></a>
+            <ul>
+                <li><a href="/">トップ</a></li>
+                <li><a href="/materials/HP/">HP担当パート教材</a></li>
+                <li><a href="/materials/PF/">PF担当パート教材</a></li>
+            </ul>
+        </nav>
+        <div>{% block content %} {% endblock %}</div>
+        <footer>
+            <div>
+                <a href="/"
+                    ><image
+                        src="/static/images/logo.png"
+                        width="160px"
+                        class="logo"
+                        style="margin-inline: calc(50% - 80px)"
+                /></a>
+                <p style="text-align: center">
+                    FairWind新歓 2024 担当体験会<br />
+                    Made with
+                    <svg
+                        aria-hidden="true"
+                        focusable="false"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                        width="16px"
+                        style="
+                            margin-inline: 0.1rem;
+                            position: relative;
+                            top: 2px;
+                            transition-duration: 0.25s;
+                        "
+                    >
+                        <path
+                            d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"
+                        ></path>
+                    </svg>
+                    by FairWind
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>
