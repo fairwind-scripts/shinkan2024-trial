@@ -2,6 +2,9 @@
 
 ## 環境構築
 
+以下、macOS では Homebrew を使用すると便利ですが、Homebrew のインストール方法は割愛します。
+PATH の設定などが必要な場合もありますが、ターミナルに表示されるメッセージに従えば基本的には問題ないはずです。
+
 ### Docker Desktop のインストール
 
 [公式サイト](https://docs.docker.com/desktop/)を参考に Docker Desktop をインストールしてください。
@@ -40,6 +43,8 @@ brew install visual-studio-code --cask
 ### `code` コマンドのインストール
 
 VSCode を起動したら、「表示」→「コマンドパレット」を選択し、`Shell Command: Install 'code' command in PATH` を実行してください。
+
+コマンドパレットは、<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>（macOS では <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>）でも開くことができる他、ウィンドウ上部の検索バーをクリックして`>`を入力することでも開くことができます。
 
 これで、ターミナルから `code` コマンド（VSCode を起動するコマンド）が使用できるようになります。
 
@@ -92,3 +97,6 @@ VSCode でこのリポジトリを開いたら、拡張機能のパネルを開�
 しばらく待つと、Dev Container が起動します。
 
 この時点で、Flask の開発環境が整っていて、<http://localhost/> で開発用サーバにアクセスできるようになっています。
+
+試しに、<http://localhost/> にアクセスしてみてください。
+`Hello, World!` などと表示されれば、環境構築は成功です。
