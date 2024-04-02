@@ -1,22 +1,19 @@
-{% extends "layout.html" %} {% block title %}サンプル{% endblock title %} {%
+{% extends "layout.html" %}
+{% block title %}
+    サンプル
+{% endblock title %}
+{%
 block content %}
 <h1>サンプルページ</h1>
 <p>
-    今回皆さんには、以下のような折りたためるメニュー（<span class="highlight"
-        >アコーディオンメニュー</span
-    >という）を作ってもらいます。
+    今回皆さんには、以下のような折りたためるメニュー（<span class="highlight">アコーディオンメニュー</span>という）を作ってもらいます。
 </p>
-<p>
-    ここでは、FairWindの「担当」を分類したものを題材としましたが、皆さんにはお好きな内容で作ってもらいたいと思います！
-</p>
+<p>ここでは、FairWindの「担当」を分類したものを題材としましたが、皆さんにはお好きな内容で作ってもらいたいと思います！</p>
 <div class="appendix">
     <h3>参考リンク</h3>
     <p>
-        FairWindの新歓サイトでは、「担当」の活動を一つ一つ詳しく説明しています！<a
-            href="https://welcome.fairwind-ut.com/activity/section/"
-            target="_blank"
-            >こちら</a
-        >も合わせて見てみてください！
+        FairWindの新歓サイトでは、「担当」の活動を一つ一つ詳しく説明しています！<a href="https://welcome.fairwind-ut.com/activity/section/"
+   target="_blank">こちら</a>も合わせて見てみてください！
     </p>
 </div>
 <ul class="include-accordion scroll-control">
@@ -50,15 +47,11 @@ block content %}
         <ul>
             <li>
                 <h3>申し込み担当</h3>
-                <p>
-                    高校の先生からの申し込みを受けてメールのやり取りをします。
-                </p>
+                <p>高校の先生からの申し込みを受けてメールのやり取りをします。</p>
             </li>
             <li>
                 <h3>質問対応担当</h3>
-                <p>
-                    高校生（など）から寄せられる質問の回答を募集し、回答をメールで送信します。
-                </p>
+                <p>高校生（など）から寄せられる質問の回答を募集し、回答をメールで送信します。</p>
             </li>
         </ul>
     </li>
@@ -82,20 +75,17 @@ block content %}
             <li>
                 <h3>プラットフォーム担当</h3>
                 <p>
-                    FairWindの活動を支える、<a href="https://fairwind-ut.com/"
-                        >Wiki</a
-                    >などのプラットフォームを維持管理しています。
+                    FairWindの活動を支える、<a href="https://fairwind-ut.com/">Wiki</a>などのプラットフォームを維持管理しています。
                 </p>
             </li>
             <li>
                 <h3>活動管理担当</h3>
-                <p>
-                    団体メンバーの名簿の管理や、活動場所の借用などを行います。
-                </p>
+                <p>団体メンバーの名簿の管理や、活動場所の借用などを行います。</p>
             </li>
         </ul>
     </li>
 </ul>
-{% endblock content %} {% block script %}
-<script src="/static/js/script.js"></script>
+{% endblock content %}
+{% block script %}
+    <script src="/static/js/script.js"></script>
 {% endblock script %}
