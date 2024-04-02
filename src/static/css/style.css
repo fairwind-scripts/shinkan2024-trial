@@ -177,6 +177,7 @@ footer p {
     border-left: #0693e3 solid 3px;
     padding: 0.1rem 1rem 0.5rem 1rem;
     background-color: rgb(224 242 254);
+    margin: 1rem 0;
 }
 
 .appendix a {
