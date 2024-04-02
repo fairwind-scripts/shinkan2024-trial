@@ -8,11 +8,11 @@ def hello_world() -> str:
     return """<div>
     <h1>Hello, World!</h1>
     <p>Welcome to the Flask app</p>
-    <a href="/template">Go to template</a>
+    <a href="/sample">Go to sample page</a>
     </div>
     """
 
 
-@app.route("/template")
-def hello() -> str:
-    return render_template("hello.html")
+@app.route("/sample")
+def sample() -> str:
+    return render_template("sample.html")
