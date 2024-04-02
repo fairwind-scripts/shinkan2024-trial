@@ -1,1 +1,82 @@
-{% extends "layout.html" %} {% block title %}サンプル{% endblock title %}
+{% extends "layout.html" %} {% block title %}サンプル{% endblock title %} {%
+block content %}
+<ul class="include-accordion scroll-control">
+    <li>
+        <button class="accordionBtn" type="button">
+            <h2>広報</h2>
+        </button>
+        <ul>
+            <li>
+                <h3>HP担当</h3>
+                <p>ホームページの記事を書いたり、管理をしたりしています。</p>
+            </li>
+            <li>
+                <h3>メルマガ担当</h3>
+                <p>毎週2回、メールマガジンを配信しています。</p>
+            </li>
+            <li>
+                <h3>X担当</h3>
+                <p>最新情報をX（旧Twitter）で発信しています。</p>
+            </li>
+            <li>
+                <h3>動画担当</h3>
+                <p>YouTubeを用いて情報発信を行なっています。</p>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <button class="accordionBtn" type="button">
+            <h2>高校・高校生とのやりとり</h2>
+        </button>
+        <ul>
+            <li>
+                <h3>申し込み担当</h3>
+                <p>
+                    高校の先生からの申し込みを受けてメールのやり取りをします。
+                </p>
+            </li>
+            <li>
+                <h3>質問対応担当</h3>
+                <p>
+                    高校生（など）から寄せられる質問の回答を募集し、回答をメールで送信します。
+                </p>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <button class="accordionBtn" type="button">
+            <h2>団体内の整備</h2>
+        </button>
+        <ul>
+            <li>
+                <h3>資金担当</h3>
+                <p>企画にかかったお金の管理などをします。</p>
+            </li>
+            <li>
+                <h3>デザイン担当</h3>
+                <p>団体内で依頼を受けて、さまざまなデザインを制作します。</p>
+            </li>
+            <li>
+                <h3>蓄積管理担当</h3>
+                <p>今後に活かせるよう、資料をまとめています。</p>
+            </li>
+            <li>
+                <h3>プラットフォーム担当</h3>
+                <p>
+                    FairWindの活動を支える、<a href="https://fairwind-ut.com/"
+                        >Wiki</a
+                    >などのプラットフォームを維持管理しています。
+                </p>
+            </li>
+            <li>
+                <h3>活動管理担当</h3>
+                <p>
+                    団体メンバーの名簿の管理や、活動場所の借用などを行います。
+                </p>
+            </li>
+        </ul>
+    </li>
+</ul>
+{% endblock content %} {% block script %}
+<script src="/static/js/script.js"></script>
+{% endblock script %}
