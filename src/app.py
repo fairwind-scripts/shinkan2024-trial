@@ -16,3 +16,8 @@ def hello_world() -> str:
 @app.route("/sample")
 def sample() -> str:
     return render_template("sample.html")
+
+
+@app.route("/materials")
+def materials() -> str:
+    return render_template("materials.html")
