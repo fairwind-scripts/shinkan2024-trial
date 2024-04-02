@@ -14,7 +14,9 @@
             rel="icon"
             href="{{url_for('static',filename='images/favicon.ico')}}"
         />
-        <title>{% block title %} {% endblock %}</title>
+        <title>
+            {% block title %} {% endblock title %} | FairWind新歓担当体験会
+        </title>
     </head>
     <body>
         <nav>
@@ -26,11 +28,11 @@
             /></a>
             <ul>
                 <li><a href="/">トップ</a></li>
-                <li><a href="/materials/HP/">HP担当パート教材</a></li>
-                <li><a href="/materials/PF/">PF担当パート教材</a></li>
+                <li><a href="/materials">教材</a></li>
+                <li><a href="/sample">サンプル</a></li>
             </ul>
         </nav>
-        <div>{% block content %} {% endblock %}</div>
+        <div>{% block content %} {% endblock content %}</div>
         <footer>
             <div>
                 <a href="/"
