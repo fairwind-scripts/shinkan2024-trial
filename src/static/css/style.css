@@ -1,6 +1,9 @@
 @charset "utf-8";
+
+/* Googleフォントを読み込む */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Inter:wght@100..900&display=swap");
 
+/* ページ全体の設定 */
 html {
     font-family: "Inter", "Noto Sans JP", sans-serif;
     margin: 0 2rem;
@@ -8,18 +11,20 @@ html {
 body {
     margin: 0;
 }
+
+/* ナビゲーションバー */
 nav {
     align-items: center;
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
     margin: 0 calc(50% - 50vw) 1rem calc(50% - 50vw);
     padding: 1rem calc(50vw - 50%);
     position: sticky;
     top: 0;
     background-color: white;
 }
-.logo {
+nav .logo {
     position: relative;
     top: 6px;
 }
@@ -41,6 +46,8 @@ nav a {
 nav a:hover {
     color: #0693e3;
 }
+
+/* フッター */
 footer {
     margin: 1rem calc(50% - 50vw) 0 calc(50% - 50vw);
     padding: 1rem calc(50vw - 50%);
@@ -58,4 +65,102 @@ footer svg:hover {
 }
 footer p {
     line-height: 1.65rem;
+}
+
+/* アコーディオンメニュー部分 */
+.include-accordion {
+    background-color: #0693e3;
+    width: 95%;
+    padding: 0;
+    color: #fcfcfc;
+    margin-left: 15px;
+    margin-right: 15px;
+    overflow: hidden;
+}
+
+.include-accordion li {
+    list-style: none;
+}
+
+.include-accordion ul {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    background-color: #fcfcfc;
+    color: #414141;
+    margin: 0.1%;
+    align-items: center;
+    justify-content: center;
+    width: 99.8%;
+    border-radius: 0%;
+}
+
+.include-accordion li li {
+    border-bottom: 1px solid #0693e3;
+    padding: 10px 0 10px 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.include-accordion li li h3 {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 70%,
+        #ffe900 70%
+    );
+    width: fit-content;
+    padding: 0 1px;
+}
+
+.include-accordion button {
+    position: relative;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    text-align: left;
+    padding: 15px 0 15px 20px;
+    font-size: 1em;
+    background-color: #0693e3;
+    color: #fff;
+}
+
+.include-accordion button:hover {
+    border: none;
+    background-color: #0046a8;
+}
+
+.include-accordion button h2::before,
+.include-accordion button h2::after {
+    content: "";
+    position: absolute;
+    top: 45px;
+    width: 1.5px;
+    height: 8px;
+    background-color: #fcfcfc;
+    transition: 0.25s;
+}
+
+.include-accordion button h2::before {
+    transform: rotate(-45deg);
+    right: 35px;
+}
+
+.include-accordion button h2::after {
+    transform: rotate(45deg);
+    right: 30px;
+}
+
+.include-accordion li.active button h2::before {
+    transform: rotate(-135deg);
+    transition: 0.25s;
+}
+
+.include-accordion li.active button h2::after {
+    transform: rotate(135deg);
+    transition: 0.25s;
+}
+
+.include-accordion .active {
+    overflow-y: auto;
 }
