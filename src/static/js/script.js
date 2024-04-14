@@ -46,3 +46,13 @@ accordions.forEach((accordion) => {
         });
     });
 });
+
+const generateLink = () => {
+    const path = document.getElementById("pathInput").value;
+    const link = document.getElementById("goTo");
+    if (link != null) {
+        link.href = "/" + path;
+    } else {
+        alert("Error");
+    }
+};
