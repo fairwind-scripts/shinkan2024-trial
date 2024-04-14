@@ -9,8 +9,12 @@
     <p>
         このページに掲載している教材は基本的に皆さんに事前にお配りしているものと同じですが、
         <ul>
-            <li><span class="highlight">忘れてしまったのでPC上で見たい！</span></li>
-            <li><span class="highlight">作業しながら教材を見たい！</span></li>
+            <li>
+                <span class="highlight">忘れてしまったのでPC上で見たい！</span>
+            </li>
+            <li>
+                <span class="highlight">作業しながら教材を見たい！</span>
+            </li>
         </ul>
         といった場合にはこちらも活用してください！
     </p>
@@ -18,10 +22,15 @@
         <h3>HP担当パート</h3>
         <a href="">FairWindで学ぶHTML・CSS入門編</a>
     </div>
-    <img src="" />
     <div class="appendix">
         <h3>PF担当パート</h3>
         <a href="">FairWindで学ぶHTML・CSS入門編</a>
     </div>
-    <img src="" />
+    <label for="pathInput">Enter Path:</label>
+    <input type="text" id="pathInput" />
+    <button onclick="generateLink()" id="finish">入力完了</button>
+    <a id="goTo" href>Go</a>
 {% endblock content %}
+{% block script %}
+    <script src="/static/js/script.js"></script>
+{% endblock script %}
