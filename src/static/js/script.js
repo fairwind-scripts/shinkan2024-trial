@@ -13,7 +13,7 @@ const slideUp = (el) => {
 
 let activeIndex = null;
 
-const accordions = document.querySelectorAll("ul.include-accordion");
+const accordions = document.querySelectorAll(".include-accordion");
 accordions.forEach((accordion) => {
     const accordionBtns = accordion.querySelectorAll(".accordionBtn");
     accordionBtns.forEach((accordionBtn, index) => {
