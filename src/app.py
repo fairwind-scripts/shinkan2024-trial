@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 
 @app.route("/")
-def hello_world() -> str:
+def greet() -> str:
     return """<div>
     <h1>Hello, World!</h1>
     <p>Welcome to the Flask app</p>
@@ -41,3 +41,8 @@ def platform() -> str:
             ],
         ),
     )
+
+
+@app.route("/materials/hp")
+def hp() -> str:
+    return render_template("materials-hp.html")
