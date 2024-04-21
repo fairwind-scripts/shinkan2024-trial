@@ -84,6 +84,10 @@ footer p {
     line-height: 1.65rem;
 }
 
+img {
+    max-width: 100%;
+}
+
 /* アコーディオンメニュー部分 */
 .include-accordion {
     width: 100%;
@@ -175,7 +179,8 @@ footer p {
     overflow-y: auto;
 }
 
-.highlight {
+.highlight,
+mark {
     font-weight: bold;
     background-image: linear-gradient(to bottom, #ffffff00 70%, #ffe900 70%);
 }

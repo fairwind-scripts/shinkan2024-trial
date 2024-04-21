@@ -1,4 +1,7 @@
+from pathlib import Path
+
 from flask import Flask, render_template
+from markdown import markdown
 
 app = Flask(__name__)
 
@@ -21,3 +24,20 @@ def sample() -> str:
 @app.route("/materials")
 def materials() -> str:
     return render_template("materials.html")
+
+
+@app.route("/materials/platform")
+def platform() -> str:
+    with Path("src/static/md/platform.md").open(encoding="utf-8") as f:
+        content = f.read()
+    content = content.replace("../images/", "/static/images/")
+    return render_template(
+        "md_template.html",
+        content=markdown(
+            content,
+            extensions=[
+                "fenced_code",
+                "codehilite",
+            ],
+        ),
+    )
