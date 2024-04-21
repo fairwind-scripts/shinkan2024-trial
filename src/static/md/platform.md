@@ -50,7 +50,7 @@ def hello_world():
 
 このコードは、`/hello-world` という URL にアクセスしたときに `Hello World!` と表示するというものです。
 
-<http://localhost/hello-world/> にアクセスして表示を確認してみてください。
+<http://localhost/hello-world> にアクセスして表示を確認してみてください。
 
 ### 動的なページを表示させてみよう
 
@@ -70,7 +70,7 @@ def time():
 
 このコードは、`/time` という URL にアクセスしたときに、その時の時刻を表示するというものです。
 
-<http://localhost/time/> にアクセスして表示を確認してみてください。
+<http://localhost/time> にアクセスして表示を確認してみてください。
 
 何回かリロードしてみると、表示が変わることがわかると思います。
 
@@ -111,7 +111,7 @@ def fairwind():
 
 このコードは、`/fairwind` という URL にアクセスしたときに、`templates` ディレクトリにある `fairwind.html` を表示するというものです。
 
-<http://localhost/fairwind/> にアクセスして表示を確認してみてください。
+<http://localhost/fairwind> にアクセスして表示を確認してみてください。
 
 テンプレートの中の `{{ now }}` は、Python のコードから渡された変数 `now` の値を表示するための記法です。
 画面に表示される時刻が変わることがわかると思います。
